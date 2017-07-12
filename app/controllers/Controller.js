@@ -22,8 +22,11 @@ class Controller {
         this.model.findById(req.params.id, (err, document) => {
             if (err)
                 next(err)
-            else
-                res.json(document)
+            else {
+                if (document.published) {
+                    res.json(document)
+                } 
+            }
         })
     }
 

@@ -41,12 +41,12 @@ let blogItem = {
                     // save into initialPost a copy of this post (used for undo)
                     initialPost = angular.copy(this.post)
 
-                    if (!this.post.published) {
-                        $state.go('blog.list');
+                    // if (!this.post.published) {
+                    //     $state.go('blog.list');
 
-                        let toastContent = `Article not published yet`
-                        Materialize.toast(toastContent, 4000, 'toast-error')
-                    }
+                    //     let toastContent = `Article not published yet`
+                    //     Materialize.toast(toastContent, 4000, 'toast-error')
+                    // }
                 })
             }
         } else {
