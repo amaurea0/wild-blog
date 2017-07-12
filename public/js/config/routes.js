@@ -19,7 +19,7 @@ export default ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($s
         .state('callback', {
             url: '/auth/callback/:token',
             template: '',
-            controller: ['UsersService', '$stateParams', '$state', function(UsersService, $stateParams, $state) {
+            controller: ['UsersService', '$stateParams', '$state', function (UsersService, $stateParams, $state) {
                 if ($stateParams.token) {
                     UsersService.setToken($stateParams.token).then((user) => {
                         let toastContent = `Welcome ${user.name} !`
@@ -29,6 +29,25 @@ export default ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($s
                 } else {
                     $state.go('blog.list')
                 }
+            }]
+        })
+        .state('algo1', {
+            url: '/algo1',
+            template: "<h3>My friends :</h3><ul><li ng-repeat='friend in friends'>{{friend}}</li></ul>",
+            controller: ['$scope', function ($scope) {
+
+                $scope.friends = friend(["Ryan", "Kieran", "Mark"]);
+
+                function friend(list) {
+                    let friends = [];
+                    for (let name of list) {
+                        if (name.length == 4) {
+                            friends.push(name);
+                        }
+                    }
+                    return friends;
+                }
+
             }]
         })
 }]
