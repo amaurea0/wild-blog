@@ -6,6 +6,18 @@
 
         <!-- In general if it's not editable it's when this component is used in the blogList component -->
         <div class="card-content">
+            <div ng-if="($ctrl.editable && $ctrl.editMode)" >
+              <!-- Switch -->
+                <div class="switch">
+                    <label>
+                    Non publié
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    Publié
+                    </label>
+                </div>
+            </div>
+        
             <!-- Display post.title if this component is not editable or editable and not in edit mode -->
             <span class="card-title" ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))">
               {{$ctrl.post.title}}
