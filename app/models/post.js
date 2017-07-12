@@ -11,6 +11,9 @@ module.exports = mongoose.model('Post', new mongoose.Schema({
     },
     content: {
         type: String
+    },
+    publiedAt: {
+        type: String
     }
 }, {
     timestamps: true
