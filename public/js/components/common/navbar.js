@@ -6,13 +6,25 @@ let navbar = {
         'use strict'
         angular.extend(this, {
             $onInit() {
-                console.log(moment().format("MMM Do YY"));
                 this.moment = moment().format('MMMM Do YYYY, h:mm:ss a');
                 UsersService.getCurrent().then((user) => {
                     this.user = user
                 }).catch((err) => {
 
                 })
+
+                function getCurrentTime() {
+                    this.moment = moment().format('MMMM Do YYYY, h:mm:ss a');
+                    // $rootScope.$emit('moment', this.moment);
+                    // timeout date effective in console log by not binded in the view ... why ? ..
+                    console.log(this.moment);
+                }
+
+                function displayCurrentTime() {
+                    setInterval(getCurrentTime, 1000)
+                };
+                displayCurrentTime();
+
             },
             disconnect() {
                 UsersService.disconnect().then(() => {
@@ -21,7 +33,12 @@ let navbar = {
                     $state.reload()
                 })
             }
-
+            // $onChanges() {
+            //     $rootScope.$on('moment', (evt, query) => {
+            //         this.querySearch = query;
+            //         this.getUsers(query.status);
+            //     });
+            // }
         })
     }]
 }
