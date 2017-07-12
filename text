@@ -2,3 +2,49 @@ Exercice 1
 Identifiant : aurore.chatagnier@gmail.com Password : astrid9862 Fork Github : c'est une copie d'un projet existant, sur son propre espace Github, pour le modifier sans toucher au projet original (pas les droits de modification par exemple si l'on n'est pas contributeur, ou volonté de ne pas altérer l'original). Branche : lorsqu'on travaille sur un projet, on créé toujours une branche, qui est une copie de la version actuelle du projet, pour faire des modifications sans toucher au projet principal. Une fois que les ajouts sont fonctionnels, on peut fusionner notre branche modifiée avec la branche principale, en local ou sur Github avec une pull request. Pull request : demande de fusion d'une branche avec une autre, ou d'un projet forké vers l'original : demande d'ajout/validations des modifications apportées à un ensemble de fichiers. L'intérêt c'est que la demande est public et les modifications peuvent être vues et commentées par tout le monde, et validée ou non par les contributeurs. Une branche est une version d'un projet et est forcément associée à un projet, et ne peut être crée que si je suis contributeur/administrateur de ce projet. Un fork est une copie de l'ensemble d'un projet, copie dont je devient l'administrateur (où je peux créer des branches)
 
 
+Que sont les méthodes agiles ? 
+Méthode de développement où les objectifs à atteindre sont fixés à chaque cycle (quelques semaines)  en accord avec le client et l'évolution du produit
+
+Qu’est-ce que SCRUM ? 
+Une méthode agile de gestion de projet
+
+Définir le Product BackLog, de quoi est-il constitué ? 
+Ensemble des users stories, grandes fonctionnalités à mettre en place classées par ordre de priorité, établi par le client/ product owner
+
+Définir le Product Owner
+Peut être le client ou son représentant, représente le lien entre l'équipe de développement et le client, impliqué lors de chaque fin de cylce (sprint) pour les éventuelles remarques, améliorations, objectifs du prochain cycle.
+
+Définir le SCRUM Master
+Réparti les tâche de l'équipe, gère le bon déroulement des méthode scrum, référent pour le product owner
+
+Définir la « Development team »
+Equipe de développement, multidiscipline
+
+Définir le Sprint, de quoi est-il constitué ? 
+sprint constitué de 1-2-3 semaines, objectifs à atteindre fixés en début de sprint : sélection des users stories avec le client
+
+Définir le daily scrum
+tout les jours stand up des avancées de la journée précédentes et des prévisions d'avancement pour la journée qui arrive
+
+Qu’est-ce que la planification d’un sprint ? 
+Découpage des users stories en tâches journalière en évaluant le temps nécessaire à leur réalisation, répartition des tâches pour chaque membre de l'équipe. 
+
+Qu’est-ce que la révision d’un sprint ?
+Tout le monde est présent, équipe, client, partenaires du projet ... 
+présentation de l'état d'avancement du projet, et planification des prochaines avancées
+
+Qu’est-ce que la rétrospective d’un sprint ? 
+équipe et client, tour de table des difficultés et points de vue de l'équipe pour une meilleure organisation
+
+Pourquoi est-il important de définir la notion de « Done » pour les tâches ?
+Savoir ce qui a été fait pour définir l'avancée du projet, prévoir le temps restant pour finir
+
+La notion de « Done » peut-elle évoluer au cours d’un projet SCRUM ? 
+Oui car les demande du client peuvent évoluer
+
+SCRUM est-elle une méthodologie itérative ? Justifier.
+Ce terme implique que l'on se rapproche au plus près de la solution à chaque itération mais sans jamais l'atteindre. Or il n'y a pas de solution fixée car elle va évoluer en fonction des attentes du clients donc par définition ce n'est pas une méthodologie itérative
+
+
+
+
