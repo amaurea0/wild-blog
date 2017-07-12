@@ -2,29 +2,20 @@ import moment from 'moment';
 
 let navbar = {
     templateUrl: 'js/components/common/navbar.html',
-    controller: ['UsersService', '$state', function (UsersService, $state) {
+    controller: ['UsersService', '$state', '$interval', function (UsersService, $state, $interval) {
         'use strict'
         angular.extend(this, {
             $onInit() {
-                this.moment = moment().format('MMMM Do YYYY, h:mm:ss a');
+                
                 UsersService.getCurrent().then((user) => {
                     this.user = user
                 }).catch((err) => {
 
                 })
 
-                function getCurrentTime() {
+                $interval(() => {
                     this.moment = moment().format('MMMM Do YYYY, h:mm:ss a');
-                    // $rootScope.$emit('moment', this.moment);
-                    // timeout date effective in console log by not binded in the view ... why ? ..
-                    console.log(this.moment);
-                }
-
-                function displayCurrentTime() {
-                    setInterval(getCurrentTime, 1000)
-                };
-                displayCurrentTime();
-
+                }, 1000)
             },
             disconnect() {
                 UsersService.disconnect().then(() => {
