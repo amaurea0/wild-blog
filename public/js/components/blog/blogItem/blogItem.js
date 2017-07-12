@@ -13,6 +13,7 @@ let blogItem = {
         'use  strict'
         let initialPost;
         this.$onInit = () => {
+
         }
 
         // Call getCurrent() method from UsersService.
@@ -39,6 +40,13 @@ let blogItem = {
                     this.post = res.data;
                     // save into initialPost a copy of this post (used for undo)
                     initialPost = angular.copy(this.post)
+
+                    if (!this.post.published) {
+                        $state.go('blog.list');
+
+                        let toastContent = `Article not published yet`
+                        Materialize.toast(toastContent, 4000, 'toast-error')
+                    }
                 })
             }
         } else {
@@ -53,6 +61,7 @@ let blogItem = {
             PostsService.delete(this.post).then((res) => {
                 // when this request receive response we change state to app.blog.list (redirection to list)
                 $state.go('blog.list')
+
             })
         }
 

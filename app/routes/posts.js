@@ -12,7 +12,7 @@ module.exports = (app) => {
     //GET (for READ)  method
     app.get('/posts', (req, res, next) => {
         req.query = {
-            published: true
+            // published: true
         }
         return ctrl.find(req, res, next)
     })
