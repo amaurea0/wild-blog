@@ -16,6 +16,16 @@ module.exports = (app) => {
         }
         return ctrl.find(req, res, next)
     })
+    //GET (for READ)  method
+    app.post('/posts/bookmarked', (req, res, next) => {
+        req.query = {
+            published: true,
+            _id: {
+                $in: req.body.bookmarked
+            }
+        }
+        return ctrl.find(req, res, next)
+    })
 
     //GET (for READ) method with request params id
     app.get('/posts/:id', (req, res, next) => {
