@@ -12,6 +12,8 @@ let blogItem = {
     controller: ['UsersService', 'PostsService', '$stateParams', '$state', function (UsersService, PostsService, $stateParams, $state) {
         'use  strict'
         let initialPost;
+        this.$onInit = () => {
+        }
 
         // Call getCurrent() method from UsersService.
         // When this request receive response we affect response data to this controller variable user
