@@ -10,6 +10,8 @@ import angularUIRouter from 'angular-ui-router'
 import angularCookies from 'angular-cookies'
 import angularMaterialize from 'angular-materialize'
 
+import 'moment'
+
 import config from './config/config.md'
 import services from './services/services.md'
 import common from './components/common/common.md'
