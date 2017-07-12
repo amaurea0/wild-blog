@@ -4,7 +4,7 @@ module.exports = {
         secretToken: process.env.SECRET_TOKEN || 'secretToken',
         env: 'development',
         facebookAuth: {
-            clientID: process.env.FACEBOOK_ID || require('./dev').facebookAuth.clientID, // your App ID
+            clientID: 'process.env.FACEBOOK_ID' || require('./dev').facebookAuth.clientID, // your App ID
             clientSecret: process.env.FACEBOOK_SECRET || require('./dev').facebookAuth.clientSecret, // your App Secret
             callbackURL: process.env.FACEBOOK_CALLBACK || require('./dev').facebookAuth.callbackURL
         }

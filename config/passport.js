@@ -57,7 +57,7 @@ module.exports = (passport) => {
   // =========================================================================
   // Initialize FacebookStrategy
   passport.use(new FacebookStrategy({
-      clientID: ENV.facebookAuth.clientID,
+      clientID: '00000',
       clientSecret: ENV.facebookAuth.clientSecret,
       callbackURL: ENV.facebookAuth.callbackURL,
       profileFields: ['id', 'name', 'photos', 'emails']
